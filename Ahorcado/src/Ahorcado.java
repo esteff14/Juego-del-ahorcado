@@ -42,7 +42,7 @@ public class Ahorcado {
             System.out.println("La palabra seleccionada en esta partida tiene " + palabraCamuflada.length() +
                     " letras: " + palabraCamuflada);
 
-            while (intentosFallidos < 6 && !palabraCamuflada.equals(palabra)) {
+            while (intentosFallidos < 7 && !palabraCamuflada.equals(palabra)) {  // Cambio aquí a 7 intentos
                 System.out.print("Adivine la letra: ");
                 letra = scanner.next();
                 letra = letra.toLowerCase();
@@ -82,7 +82,7 @@ public class Ahorcado {
                         System.out.println("Dibujaré el otro brazo...\n\n   O  \n / | \\  \n");
                     } else if (intentosFallidos == 5) {
                         System.out.println("Dibujaré la pierna...\n\n   O  \n / | \\  \n  /  \n");
-                    } else {
+                    } else if (intentosFallidos == 6) {
                         System.out.println("Dibujaré la otra pierna...\n\n   O  \n / | \\  \n  / \\ \n");
                         System.out.println("Perdiste, suerte para la próxima......");
                         System.out.println("La palabra era: " + palabra);
